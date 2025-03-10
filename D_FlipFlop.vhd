@@ -30,6 +30,6 @@ Signal clk_signal : std_logic;
 Signal QtoD_signal   : std_logic;
 
 Begin 
-	Master : Lab5 PORT MAP(D => D, clr => clr, G => NOT clk, Q => QtoD_signal);
-	Slave  : Lab5 PORT MAP(D => QtoD_signal, clr => clr, G => clk, Q => Q);
+	Master : D_Latch PORT MAP(D => D, clr => clr, G => NOT clk, Q => QtoD_signal);
+	Slave  : D_Latch PORT MAP(D => QtoD_signal, clr => clr, G => clk, Q => Q);
 End ARCHITECTURE;
